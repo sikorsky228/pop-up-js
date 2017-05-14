@@ -1,3 +1,4 @@
+jQuery.noConflict();
 (function($){
     //adding elements
     $('body').append("<div class='popup-wrapper'>" +
