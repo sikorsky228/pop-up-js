@@ -77,8 +77,8 @@
 
     //request
     $.ajax({
-        url: "http://dev.nexusmedia-ua.com/devtest/"
-    }).done(function(data) {
+        url: "http://dev.nexusmedia-ua.com/devtest/",
+        success : function (data) {
         //get data
         imageData = data.messages[0]['image'];
         nameData = data.messages[0]['name'];
@@ -90,7 +90,11 @@
         $('.name-block').append(nameData);
         $('.title-block').append(titleData);
         $('.message-block').append(messageData);
-    });
+    },
+        error : function (error) {
+            console.log(error);
+        }
+});
 
     //events
 
